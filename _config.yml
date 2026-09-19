@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Home"
+title                    : "Ananya Albrecht-Buehler"
 title_separator          : "-"
 name                     : &name "Ananya Albrecht-Buehler"
-description              : &description "PhD Student"
+description              : &description "Academic website of Ananya Albrecht-Buehler, PhD student at the University of Tübingen."
 url                      : "https://aalbrechtbuehler.github.io" 
 baseurl                  : "" 
 repository               : "aalbrechtbuehler/aalbrechtbuehler.github.io"
@@ -24,7 +24,7 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Ananya Albrecht-Buehler"
-  description      : "PhD Student"
+  description      : "Academic website of Ananya Albrecht-Buehler, PhD student at the University of Tübingen."
   pronouns         : ""
   bio              : "PhD student in Cognitive Science"
   location         : "Tübingen, Germany"
