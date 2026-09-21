@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Ananya Albrecht-Buehler"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Ananya Albrecht-Buehler"
 description              : &description "Academic website of Ananya Albrecht-Buehler, PhD student at the University of Tübingen."
