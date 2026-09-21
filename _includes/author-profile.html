@@ -12,14 +12,14 @@
      ========================================================================== */
 
   .sidebar-wrap {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 30px 25px 40px 25px;
-    margin: 0;
-    background-color: var(--global-mauve-color);
-    color: var(--global-stone-color-light);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 25px 40px 25px;
+  margin: 0;
+  background-color: var(--global-mauve-color);
+  color: var(--global-stone-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
 
 
   /* ==========================================================================
@@ -71,7 +71,7 @@
 
   .sidebar-wrap .author__content h3 {
     margin: 0;
-    color: var(--global-stone-color-light);
+    color: var(--global-stone-color);
     font-size: 1.1em;
     line-height: 1.15;
     font-weight: 700;
@@ -80,7 +80,7 @@
 
   .sidebar-wrap .author__content h4 {
     margin: 6px 0 0 0;
-    color: var(--global-stone-color-light);
+    color: var(--global-stone-color);
     font-size: 0.7em;
     line-height: 1.4;
     font-weight: 500;
@@ -115,7 +115,7 @@
 
   .fa-icon {
     display: inline-block;
-    color: var(--global-stone-color-light);
+    color: var(--global-stone-color);
     font-size: 1.3em;
     transition: all 0.3s ease;
   }
@@ -124,24 +124,12 @@
     transform: translateY(-3px);
   }
 
-  .email-icon:hover {
-    color: #d93025;
-  }
-
-  .scholar-icon:hover {
-    color: #4285f4;
-  }
-
-  .github-icon:hover {
-    color: #333333;
-  }
-
-  .linkedin-icon:hover {
-    color: #0077b5;
-  }
-
+  .email-icon:hover,
+  .scholar-icon:hover,
+  .github-icon:hover,
+  .linkedin-icon:hover,
   .orcid-icon:hover {
-    color: #a6ce39;
+    color: var(--global-stone-color);
   }
 
 
@@ -154,8 +142,8 @@
     box-sizing: border-box;
     margin: 0 0 15px 0;
     padding: 0 0 6px 0;
-    border-bottom: 1px solid var(--global-stone-color-light);
-    color: var(--global-stone-color-light);
+    border-bottom: 1px solid var(--global-stone-color);
+    color: var(--global-stone-color);
     font-size: 0.90em;
     font-weight: 700;
     line-height: 1.3;
@@ -220,7 +208,7 @@
     box-sizing: border-box;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid var(--global-stone-color-light);
+    border-top: 1px solid var(--global-stone-color);
     text-align: center;
   }
 
@@ -228,9 +216,9 @@
     display: inline-block;
     box-sizing: border-box;
     padding: 8px 20px;
-    border: 1px solid var(--global-stone-color-light);
+    border: 1px solid var(--global-sage-color);
     border-radius: 4px;
-    color: var(--global-stone-color-light);
+    color: var(--global-stone-color);
     background-color: var(--global-sage-color);
     font-size: 0.85em;
     font-weight: 600;
@@ -243,7 +231,8 @@
 
   .cv-button:hover {
     background-color: var(--global-teal-color);
-    color: var(--global-stone-color-light) !important;
+    border-color: var(--global-teal-color);
+    color: var(--global-stone-color) !important;
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(44, 62, 80, 0.15);
   }
@@ -276,7 +265,7 @@
       width: 100%;
       padding: 25px 20px 30px 20px;
       margin-bottom: 25px;
-      border-bottom: 1px solid var(--global-stone-color-light);
+      border-bottom: 1px solid var(--global-stone-color);
     }
 
     .sidebar-wrap .author__avatar img {
