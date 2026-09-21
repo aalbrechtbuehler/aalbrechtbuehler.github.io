@@ -52,5 +52,14 @@ html[data-theme="dark"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
-}
 
+    /* -- Site-specific variables (dark equivalents) -- */
+    --global-white                      : #ffffff;
+    --global-hover-color                : #{$link-dark};
+    --global-card-bg-color              : #{$background-light};
+    --global-surface-color              : #{$background-lighter};
+    --global-link-tint-color            : #{$background-light};
+    --global-link-tint-border-color     : #{$background-lighter};
+    --global-scrollbar-color            : #{$light-gray};
+    --global-scrollbar-hover-color      : #{$gray};
+}
