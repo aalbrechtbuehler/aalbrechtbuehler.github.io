@@ -144,16 +144,15 @@ input[type="button"] {
     color: var(--global-stone-color);
 }
 
-.masthead {
-    background-color: var(--global-sage-color);
+.masthead,
+.greedy-nav {
+    background-color: var(--global-sage-color) !important;
 }
 
-.greedy-nav__toggle {
-    background-color: var(--global-sage-color);
-    color: var(--global-stone-color);
+.greedy-nav a {
+    color: var(--global-stone-color) !important;
+}
 
-    &:hover {
-        background-color: var(--global-teal-color);
-        color: var(--global-stone-color);
-    }
+.greedy-nav a:hover {
+    color: var(--global-stone-color) !important;
 }
