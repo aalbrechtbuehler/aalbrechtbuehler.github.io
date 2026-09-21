@@ -338,14 +338,22 @@
 }
 
 .page {
-  width: 90% !important; /* Tells the main content to take up 75% of the screen, leaving 25% for the sidebar */
+  width: auto !important;
   padding-right: 20px !important;
 }
 
-/* Kill the old float behavior */
 .sidebar {
-  width: auto !important;
+  width: 330px !important;
+  max-width: 330px !important;
+  min-width: 330px !important;
+
   float: none !important;
   position: static !important;
+
+  background-color: #FFFDFB;
+  box-sizing: border-box;
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
