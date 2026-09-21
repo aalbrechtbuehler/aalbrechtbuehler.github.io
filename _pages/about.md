@@ -2,6 +2,7 @@
 permalink: /
 title: "ABOUT"
 author_profile: false
+classes: about-page
 redirect_from: 
   - /about/
   - /about.html
@@ -18,6 +19,7 @@ redirect_from:
   --port-bg: var(--global-card-bg-color);
   --port-border: var(--global-border-color);
 }
+  
 
   /* =========================================
      2. GLOBAL HEADER FIXES (Matches Portfolio)
@@ -181,6 +183,13 @@ redirect_from:
       padding: 10px 12px;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+  .about-page .page__inner-wrap,
+  .about-page .page__content {
+    padding-left: 35px !important;
+  }
+}
 </style>
 
 <div class="content-text">
