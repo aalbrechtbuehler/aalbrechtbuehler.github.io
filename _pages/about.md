@@ -14,7 +14,7 @@ redirect_from:
 :root {
   --port-primary: var(--global-base-color);
   --port-text: var(--global-text-color);
-  --port-muted: var(--global-text-color-light);
+  --port-muted: var(--global-text-color);
   --port-bg: var(--global-bg-color);
   --port-border: var(--global-border-color);
 }
