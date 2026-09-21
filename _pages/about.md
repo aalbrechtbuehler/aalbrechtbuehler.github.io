@@ -197,8 +197,8 @@ redirect_from:
     I am a PhD student in the
     <a href="https://cogsciprag.github.io/home/" target="_blank" rel="noopener noreferrer">Cognitive Science and Pragmatics Group</a>
     at the University of Tübingen,
-    working in the
-    <a href="https://uni-tuebingen.de/en/research/core-research/collaborative-research-centers/crc-common-ground/projects/a7-bohn-franke-froehlich/" target="_blank" rel="noopener noreferrer">SFB 1718 Common Ground Project A7 (Modeling Great Ape Signaling Behavior: Evolutionary Roots of Common Ground)</a>.
+    working in the SFB 1718 Common Ground Project A7
+    <a href="https://uni-tuebingen.de/en/research/core-research/collaborative-research-centers/crc-common-ground/projects/a7-bohn-franke-froehlich/" target="_blank" rel="noopener noreferrer"> (Modeling Great Ape Signaling Behavior: Evolutionary Roots of Common Ground)</a>.
     My general interests lie in animal communication and linguistic modeling, and I have worked with many species including pigeons, bumblebees, finches, and cichlids.
     My current research investigates multimodal communication in great apes using game- and information-theoretic approaches.
   </p>
