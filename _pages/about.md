@@ -12,12 +12,12 @@ redirect_from:
      1. STATIC LIGHT THEME VARIABLES (Locked)
      ========================================= */
 :root {
-    --port-primary: #8B0836;    /* Dark Academic Blue */
-    --port-text: #3b3b3b;       /* Dark Gray for readability */
-    --port-muted: #64748b;      /* Muted gray for subtitles */
-    --port-bg: #C6828A;         /* Almost white for cards */
-    --port-border: #eaeaea;     /* Light gray borders */
-  }
+  --port-primary: var(--global-base-color);
+  --port-text: var(--global-text-color);
+  --port-muted: var(--global-text-color-light);
+  --port-bg: var(--global-bg-color);
+  --port-border: var(--global-border-color);
+}
 
   /* =========================================
      2. GLOBAL HEADER FIXES (Matches Portfolio)
