@@ -13,7 +13,7 @@ author_profile: false
   --port-primary: var(--global-base-color);
   --port-text: var(--global-text-color);
   --port-muted: var(--global-text-color-light);
-  --port-bg: var(--global-bg-color);
+  --port-bg: var(--global-card-bg-color);
   --port-border: var(--global-border-color);
 }
 
@@ -25,8 +25,8 @@ author_profile: false
   .masthead__menu, 
   .masthead__menu ul, 
   .greedy-nav {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
+    background-color: var(--global-bg-color) !important;
+    background: var(--global-bg-color) !important;
   }
   
   .masthead {
@@ -62,7 +62,7 @@ author_profile: false
 
   /* Collaboration Alert */
   .collab-box {
-    background-color: var(--accent-color);
+    background-color: var(--global-link-tint-color);
     border-left: 4px solid var(--port-primary);
     padding: 14px 18px;
     font-size: 0.95em;
@@ -136,11 +136,11 @@ author_profile: false
   }
 
   /* Toolbar Button Styles */
-  .venue-btn { background-color: var(--port-primary); color: #ffffff; border: 1px solid var(--port-primary); }
+  .venue-btn { background-color: var(--port-primary); color: var(--global-white); border: 1px solid var(--port-primary); }
   .impact-badge { background-color: var(--port-bg); color: var(--port-primary); border: 1px solid var(--port-border); cursor: default; }
-  .doi-btn { background-color: #f0f7ff; color: #3172b4; border: 1px solid #d0e3f7; }
+  .doi-btn { background-color: var(--global-link-tint-color); color: var(--global-link-color); border: 1px solid var(--global-link-tint-border-color); }
   .abstract-btn { background-color: var(--port-bg); color: var(--port-muted); border: 1px solid var(--port-border); text-transform: uppercase; }
-  .abstract-btn:hover { background-color: var(--port-primary); color: #ffffff; border-color: var(--port-primary); }
+  .abstract-btn:hover { background-color: var(--port-primary); color: var(--global-white); border-color: var(--port-primary); }
 
   /* Info Boxes (Abstract Dropdowns) */
   .info-box {
@@ -228,7 +228,7 @@ author_profile: false
           abstractBox.style.display = "none";
           const isDoi = this.classList.contains('doi-btn');
           const content = this.getAttribute('data-full');
-          const html = isDoi ? `<strong>Link:</strong> <a href="${content}" target="_blank" style="color:#3172b4; text-decoration:underline;">${content}</a>` : `<strong>Venue:</strong> ${content}`;
+          const html = isDoi ? `<strong>Link:</strong> <a href="${content}" target="_blank" style="color:var(--global-link-color); text-decoration:underline;">${content}</a>` : `<strong>Venue:</strong> ${content}`;
           
           if (detailsBox.style.display === "block" && detailsBox.innerHTML === html) {
             detailsBox.style.display = "none";
