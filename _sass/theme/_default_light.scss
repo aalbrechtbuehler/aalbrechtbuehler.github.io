@@ -1,181 +1,145 @@
 /* ==========================================================================
-   PLUM / SAGE / TEAL COLOR THEME
+   CUSTOM FIVE-COLOR THEME
    ========================================================================== */
 
-/* ==========================================================================
-   PRIMARY PALETTE
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   Core colors
+   -------------------------------------------------------------------------- */
 
-/* Core palette
- *
- * #562154  Deep plum
- * #9A7E98  Dusty mauve
- * #D3D2C7  Warm stone
- * #87A18F  Muted sage
- * #29524A  Deep teal
- */
-
-$primary-color              : #562154;  // deep plum
-$gray                       : #6F6D6E;  // neutral charcoal
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$primary-color : #562154; // Deep plum
+$secondary-color : #9A7E98; // Dusty mauve
+$background-color : #D3D2C7; // Warm stone
+$button-color : #87A18F; // Muted sage
+$accent-color : #29524A; // Deep teal
 
 
-/* ==========================================================================
-   SEMANTIC COLORS
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   Grayscale aliases
+   -------------------------------------------------------------------------- */
 
-$danger-color               : #9A7E98;  // dusty mauve
-$info-color                 : #29524A;  // deep teal
-$notice-color               : #6F6D6E;  // neutral gray
-$success-color              : #87A18F;  // muted sage
-$warning-color              : #87A18F;  // muted sage
-
-
-/* ==========================================================================
-   TEMPLATE SETTINGS
-   ========================================================================== */
-
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(41, 82, 74, 0.10);
-$global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
-$sidebar-screen-min-width   : 1024px;
+$gray           : $primary-color;
+$dark-gray      : $primary-color;
+$darker-gray    : $primary-color;
+$light-gray     : $background-color;
+$lighter-gray   : $background-color;
 
 
-/* ==========================================================================
-   LIGHT THEME
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   Semantic colors
+   -------------------------------------------------------------------------- */
+
+$danger-color   : $secondary-color;
+$info-color     : $accent-color;
+$notice-color   : $primary-color;
+$success-color  : $button-color;
+$warning-color  : $secondary-color;
+
+
+/* --------------------------------------------------------------------------
+   Layout variables
+   -------------------------------------------------------------------------- */
+
+$border-radius            : 4px;
+$box-shadow               : none;
+$global-transition        : all 0.2s ease-in-out;
+$masthead-height          : 70px;
+$navicon-width            : 28px;
+$navicon-height           : 4px;
+$sidebar-link-max-width   : 250px;
+$sidebar-screen-min-width : 1024px;
+
+
+/* --------------------------------------------------------------------------
+   Global theme variables
+   -------------------------------------------------------------------------- */
 
 :root {
+    --global-base-color                : #562154;
+    --global-bg-color                  : #D3D2C7;
+    --global-footer-bg-color           : #87A18F;
+    --global-border-color              : #562154;
+    --global-dark-border-color         : #562154;
+    --global-code-background-color     : #D3D2C7;
+    --global-code-text-color           : #562154;
+    --global-text-color                : #562154;
+    --global-text-color-light          : #562154;
+    --global-fig-caption-color         : #562154;
+    --global-thead-color               : #9A7E98;
+    --global-link-color                : #562154;
+    --global-link-color-hover          : #29524A;
+    --global-link-color-visited        : #9A7E98;
+    --global-masthead-link-color       : #562154;
+    --global-masthead-link-color-hover : #29524A;
+    --global-white                     : #D3D2C7;
+    --global-hover-color               : #29524A;
 
-    /* ----------------------------------------------------------------------
-       MAIN THEME COLORS
-       ---------------------------------------------------------------------- */
+    --global-card-bg-color             : #D3D2C7;
+    --global-surface-color             : #D3D2C7;
 
-    --global-base-color                 : #562154;
-    --global-bg-color                   : #F8F7F3;
-    --global-footer-bg-color            : #E9E9E1;
+    --global-link-tint-color           : #87A18F;
+    --global-link-tint-border-color    : #87A18F;
 
-    --global-border-color               : #D8D6CC;
-    --global-dark-border-color          : #AAA9A0;
-
-
-    /* ----------------------------------------------------------------------
-       CODE
-       ---------------------------------------------------------------------- */
-
-    --global-code-background-color      : #EEEDE7;
-    --global-code-text-color            : #3F3D3F;
-
-
-    /* ----------------------------------------------------------------------
-       TEXT
-       ---------------------------------------------------------------------- */
-
-    --global-text-color                 : #343234;
-    --global-text-color-light           : #716C70;
-    --global-fig-caption-color          : #6D676C;
-    --global-thead-color                : #E4E3DB;
-
-
-    /* ----------------------------------------------------------------------
-       LINKS
-       ---------------------------------------------------------------------- */
-
-    --global-link-color                 : #29524A;
-    --global-link-color-hover           : #562154;
-    --global-link-color-visited         : #9A7E98;
-
-
-    /* ----------------------------------------------------------------------
-       NAVIGATION
-       ---------------------------------------------------------------------- */
-
-    --global-masthead-link-color        : #343234;
-    --global-masthead-link-color-hover  : #562154;
-
-
-    /* ----------------------------------------------------------------------
-       SITE-WIDE UTILITY COLORS
-       ---------------------------------------------------------------------- */
-
-    --global-white                      : #FFFFFF;
-
-    --global-hover-color                : #29524A;
-
-
-    /* ----------------------------------------------------------------------
-       CARDS / BOXES / BADGES
-       ---------------------------------------------------------------------- */
-
-    --global-card-bg-color              : #F1F0EA;
-    --global-surface-color              : #E8E7DF;
-
-
-    /* ----------------------------------------------------------------------
-       ACCENT BACKGROUNDS
-       ---------------------------------------------------------------------- */
-
-    --global-link-tint-color            : #E8DFE7;
-    --global-link-tint-border-color     : #C8B9C7;
-
-
-    /* ----------------------------------------------------------------------
-       SAGE ACCENTS
-       ---------------------------------------------------------------------- */
-
-    --global-sage-color                 : #87A18F;
-    --global-sage-light                 : #E0E8E2;
-    --global-sage-border                : #B8C8BC;
-
-
-    /* ----------------------------------------------------------------------
-       MAUVE ACCENTS
-       ---------------------------------------------------------------------- */
-
-    --global-mauve-color                : #9A7E98;
-    --global-mauve-light                : #E8DFE7;
-    --global-mauve-border               : #C8B9C7;
-
-
-    /* ----------------------------------------------------------------------
-       STONE / NEUTRAL ACCENTS
-       ---------------------------------------------------------------------- */
-
-    --global-stone-color                : #D3D2C7;
-    --global-stone-light                : #F3F2ED;
-
-
-    /* ----------------------------------------------------------------------
-       TEAL ACCENTS
-       ---------------------------------------------------------------------- */
-
-    --global-teal-color                 : #29524A;
-    --global-teal-light                 : #DFE8E5;
-    --global-teal-border                : #B6C9C4;
-
-
-    /* ----------------------------------------------------------------------
-       SCROLLBAR
-       ---------------------------------------------------------------------- */
-
-    --global-scrollbar-color            : #B9B8AF;
-    --global-scrollbar-hover-color      : #87867F;
-
+    --global-sage-color                : #87A18F;
+    --global-mauve-color               : #9A7E98;
+    --global-stone-color               : #D3D2C7;
+    --global-teal-color                : #29524A;
+    --global-plum-color                : #562154;
 }
 
 
-/* ==========================================================================
-   CUSTOM BACKGROUND
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   Base page
+   -------------------------------------------------------------------------- */
 
 html,
 body {
-    background-color: #F3F2ED !important;
+    background-color: var(--global-bg-color) !important;
+    color: var(--global-text-color);
+}
+
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+
+a {
+    color: var(--global-link-color);
+
+    &:hover {
+        color: var(--global-link-color-hover);
+    }
+
+    &:visited {
+        color: var(--global-link-color-visited);
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.btn,
+button,
+input[type="submit"],
+input[type="button"] {
+    background-color: var(--global-sage-color);
+    border-color: var(--global-sage-color);
+    color: var(--global-stone-color);
+
+    &:hover {
+        background-color: var(--global-teal-color);
+        border-color: var(--global-teal-color);
+        color: var(--global-stone-color);
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.page__footer {
+    background-color: var(--global-footer-bg-color);
+    color: var(--global-stone-color);
 }
