@@ -14,8 +14,8 @@ redirect_from:
 :root {
   --port-primary: var(--global-base-color);
   --port-text: var(--global-text-color);
-  --port-muted: var(--global-text-color);
-  --port-bg: var(--global-bg-color);
+  --port-muted: var(--global-text-color-light);
+  --port-bg: var(--global-card-bg-color);
   --port-border: var(--global-border-color);
 }
 
@@ -27,8 +27,8 @@ redirect_from:
   .masthead__menu, 
   .masthead__menu ul, 
   .greedy-nav {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
+    background-color: var(--global-bg-color) !important;
+    background: var(--global-bg-color) !important;
   }
   
   .masthead {
@@ -89,7 +89,7 @@ redirect_from:
 
   /* Collaboration Alert */
   .collab-box {
-    background-color: var(--accent-color);
+    background-color: var(--global-link-tint-color);
     border-left: 4px solid var(--port-primary);
     padding: 14px 18px;
     font-size: 0.95em;
@@ -112,7 +112,7 @@ redirect_from:
   
   .pill {
     background-color: var(--port-primary); 
-    color: #ffffff; 
+    color: var(--global-white); 
     font-size: 0.85em; 
     font-weight: 600;
     padding: 6px 14px;
@@ -131,8 +131,8 @@ redirect_from:
   
   .news-scroll-container::-webkit-scrollbar { width: 5px; }
   .news-scroll-container::-webkit-scrollbar-track { background: var(--port-bg); }
-  .news-scroll-container::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
-  .news-scroll-container::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+  .news-scroll-container::-webkit-scrollbar-thumb { background: var(--global-scrollbar-color); border-radius: 10px; }
+  .news-scroll-container::-webkit-scrollbar-thumb:hover { background: var(--global-scrollbar-hover-color); }
 
   .timeline-item {
     display: flex; 
@@ -157,7 +157,7 @@ redirect_from:
 
   /* Highlighted Milestones */
   .timeline-item.milestone {
-    background-color: var(--accent-color); 
+    background-color: var(--global-link-tint-color); 
     border-radius: 4px;
     padding: 8px 12px; /* Added horizontal padding to prevent cutoff */
     margin-left: -12px; /* Offsets the padding to align visually */
