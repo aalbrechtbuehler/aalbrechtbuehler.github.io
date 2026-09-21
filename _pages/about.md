@@ -12,10 +12,10 @@ redirect_from:
      1. STATIC LIGHT THEME VARIABLES (Locked)
      ========================================= */
 :root {
-    --port-primary: #2c3e50;    /* Dark Academic Blue */
+    --port-primary: #8B0836;    /* Dark Academic Blue */
     --port-text: #3b3b3b;       /* Dark Gray for readability */
     --port-muted: #64748b;      /* Muted gray for subtitles */
-    --port-bg: #fdfdfd;         /* Almost white for cards */
+    --port-bg: #C6828A;         /* Almost white for cards */
     --port-border: #eaeaea;     /* Light gray borders */
   }
 
