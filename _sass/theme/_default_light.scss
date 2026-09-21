@@ -1,8 +1,11 @@
 /* ==========================================================================
     DEFAULT THEME - LIGHT VERSION
     ========================================================================== */
-/* Color codes used for the theme */
-$primary-color              : #861063;
+/* Color codes used for the theme
+   This is the single source of truth for the site's color scheme.
+   Every page/include should reference the --global-* custom properties
+   below rather than hardcoding hex values. */
+$primary-color              : #2c3e50;
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
@@ -28,21 +31,31 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Default light theme for the site */
 :root {
-    --global-base-color                 : #{$primary-color};
-    --global-bg-color                   : #EBD5E1;
-    --global-footer-bg-color            : #CC97B5;
-    --global-border-color               : #{$lighter-gray};
+    /* -- Standard minimal-mistakes theme variables -- */
+    --global-base-color                 : #2c3e50; /* primary navy: headings, borders, icons, active states */
+    --global-bg-color                   : #ffffff; /* page / masthead background */
+    --global-footer-bg-color            : #fcfcfc;
+    --global-border-color               : #eaeaea;
     --global-dark-border-color          : #bdc1c4;
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
+    --global-link-color                 : #3172b4; /* accent blue: links, DOI/venue buttons */
+    --global-link-color-hover           : #1a252f;
+    --global-link-color-visited         : mix(#fff, #3172b4, 25%);
+    --global-masthead-link-color        : #3b3b3b;
+    --global-masthead-link-color-hover  : #2c3e50;
+    --global-text-color                 : #3b3b3b; /* body copy */
+    --global-text-color-light           : #8fa0b3; /* muted / secondary text (labels, meta, captions) */
     --global-thead-color                : #{$lighter-gray};
-}
 
+    /* -- Site-specific variables (added so pages never need literal hex) -- */
+    --global-white                      : #ffffff;
+    --global-hover-color                : #1a252f; /* darker navy for hover/active states */
+    --global-card-bg-color              : #fdfdfd; /* cards, badges, info boxes */
+    --global-surface-color              : #f4f6f8; /* pill/tab track backgrounds */
+    --global-link-tint-color            : #f0f7ff; /* light accent-tinted background (DOI buttons, callouts) */
+    --global-link-tint-border-color     : #d0e3f7;
+    --global-scrollbar-color            : #d1d5db;
+    --global-scrollbar-hover-color      : #9ca3af;
+}
