@@ -29,8 +29,8 @@ redirect_from:
   .masthead__menu, 
   .masthead__menu ul, 
   .greedy-nav {
-    background-color: var(--global-bg-color) !important;
-    background: var(--global-bg-color) !important;
+    background-color: var(--global-sage-color) !important;
+    background: var(--global-sage-color) !important;
   }
   
   .masthead {
