@@ -1,27 +1,26 @@
+```scss
 /* ==========================================================================
-    DEFAULT THEME - LIGHT VERSION
-    ========================================================================== */
-/* Color codes used for the theme
-   This is the single source of truth for the site's color scheme.
-   Every page/include should reference the --global-* custom properties
-   below rather than hardcoding hex values. */
-$primary-color              : #781364;
-$gray                       : #7a8288;
+   MUTED BURGUNDY COLOR THEME
+   ========================================================================== */
+
+/* Primary palette */
+$primary-color              : #7A3048;  // muted burgundy
+$gray                       : #777276;  // warm neutral gray
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-/* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+/* Semantic colors */
+$danger-color               : #A8545E;  // muted berry red
+$info-color                 : #527A7A;  // muted teal
+$notice-color               : #777276;  // warm gray
+$success-color              : #647A68;  // muted sage
+$warning-color              : #A77A4A;  // muted ochre
 
 /* Other basic settings for the template */
 $border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$box-shadow                 : 0 1px 1px rgba(60, 35, 45, 0.10);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
@@ -29,34 +28,63 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Default light theme for the site */
+
+/* ==========================================================================
+   LIGHT THEME
+   ========================================================================== */
+
 :root {
-    /* -- Standard minimal-mistakes theme variables -- */
-    --global-base-color                 : #781364; /* primary plum: headings, borders, icons, active states */
-    --global-bg-color                   : #E8D4E1; /* page / masthead background */
-    --global-footer-bg-color            : #fcfafc;
-    --global-border-color               : #eaeaea;
-    --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #8c367b; /* accent plum: links, DOI/venue buttons */
-    --global-link-color-hover           : #540d46;
-    --global-link-color-visited         : mix(#fff, #8c367b, 25%);
-    --global-masthead-link-color        : #3b3b3b;
-    --global-masthead-link-color-hover  : #781364;
-    --global-text-color                 : #3b3b3b; /* body copy */
-    --global-text-color-light           : #7a6c81; /* muted / secondary text (labels, meta, captions) */
-    --global-thead-color                : #{$lighter-gray};
 
-    /* -- Site-specific variables (added so pages never need literal hex) -- */
-    --global-white                      : #E8D4E1;
-    --global-hover-color                : #540d46; /* darker plum for hover/active states */
-    --global-card-bg-color              : #fbf8fa; /* cards, badges, info boxes */
-    --global-surface-color              : #f8f3f7; /* pill/tab track backgrounds */
-    --global-link-tint-color            : #f6eef4; /* light accent-tinted background (DOI buttons, callouts) */
-    --global-link-tint-border-color     : #e4d0e0;
-    --global-scrollbar-color            : #d1d5db;
-    --global-scrollbar-hover-color      : #9ca3af;
+    /* -- Main theme colors -- */
+
+    --global-base-color                 : #7A3048;  /* burgundy: headings, icons, borders */
+    --global-bg-color                   : #FFFDFB;  /* warm white page background */
+    --global-footer-bg-color            : #F7F1F2;  /* very pale burgundy */
+    --global-border-color               : #E5D9DC;  /* soft mauve-gray */
+    --global-dark-border-color          : #B9A5AA;
+
+    /* -- Code -- */
+
+    --global-code-background-color      : #F7F3F1;
+    --global-code-text-color            : #5E5558;
+
+    /* -- Text -- */
+
+    --global-text-color                 : #3F393B;
+    --global-text-color-light           : #786D71;
+    --global-fig-caption-color          : #766B6F;
+    --global-thead-color                : #F0E7E9;
+
+    /* -- Links -- */
+
+    --global-link-color                 : #7A3048;  /* burgundy */
+    --global-link-color-hover           : #572236;  /* deep burgundy */
+    --global-link-color-visited         : #8E5366;  /* dusty rose */
+
+    /* -- Navigation -- */
+
+    --global-masthead-link-color        : #40393B;
+    --global-masthead-link-color-hover  : #7A3048;
+
+    /* -- Site-wide utility colors -- */
+
+    --global-white                      : #FFFFFF;
+
+    --global-hover-color                : #572236;
+
+    /* -- Cards / boxes / badges -- */
+
+    --global-card-bg-color              : #FBF6F7;
+    --global-surface-color              : #F4EBEE;
+
+    /* -- Accent backgrounds -- */
+
+    --global-link-tint-color            : #F3E5E9;
+    --global-link-tint-border-color     : #DCC4CB;
+
+    /* -- Scrollbar -- */
+
+    --global-scrollbar-color            : #CFC3C7;
+    --global-scrollbar-hover-color      : #A99AA0;
 }
-
+```
