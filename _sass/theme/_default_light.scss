@@ -123,13 +123,13 @@ a {
 button,
 input[type="submit"],
 input[type="button"] {
-    background-color: var(--global-sage-color);
-    border-color: var(--global-sage-color);
+    background-color: var(--global-teal-color);
+    border-color: var(--global-teal-color);
     color: var(--global-stone-color);
 
     &:hover {
-        background-color: var(--global-teal-color);
-        border-color: var(--global-teal-color);
+        background-color: var(--global-sage-color);
+        border-color: var(--global-sage-color);
         color: var(--global-stone-color);
     }
 }
