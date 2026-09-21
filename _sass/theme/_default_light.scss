@@ -143,3 +143,13 @@ input[type="button"] {
     background-color: var(--global-footer-bg-color);
     color: var(--global-stone-color);
 }
+
+.greedy-nav__toggle {
+    background-color: var(--global-sage-color);
+    color: var(--global-stone-color);
+
+    &:hover {
+        background-color: var(--global-teal-color);
+        color: var(--global-stone-color);
+    }
+}
