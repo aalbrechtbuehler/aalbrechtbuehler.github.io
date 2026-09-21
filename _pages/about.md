@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About"
+title: "ABOUT"
 author_profile: false
 redirect_from: 
   - /about/
@@ -11,14 +11,7 @@ redirect_from:
   /* =========================================
      1. STATIC LIGHT THEME VARIABLES (Locked)
      ========================================= */
-  :root {
-    --port-primary: #2c3e50;    /* Dark Academic Blue */
-    --port-text: #3b3b3b;       /* Dark Gray for readability */
-    --port-muted: #64748b;      /* Muted gray for subtitles */
-    --port-bg: #fdfdfd;         /* Almost white for cards */
-    --port-border: #eaeaea;     /* Light gray borders */
-    --accent-color: #f0f7ff;    /* Soft blue for milestones */
-  }
+
 
   /* =========================================
      2. GLOBAL HEADER FIXES (Matches Portfolio)
