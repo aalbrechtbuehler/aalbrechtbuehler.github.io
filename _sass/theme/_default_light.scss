@@ -144,15 +144,6 @@ input[type="button"] {
     color: var(--global-stone-color);
 }
 
-.masthead,
-.greedy-nav {
+.masthead {
     background-color: var(--global-sage-color) !important;
-}
-
-.greedy-nav a {
-    color: var(--global-stone-color) !important;
-}
-
-.greedy-nav a:hover {
-    color: var(--global-stone-color) !important;
 }
