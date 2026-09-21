@@ -7,227 +7,485 @@
 {% endif %}
 
 <style>
-  /* Global Main Content Fixes */
-  #main p, .page__content p, .archive p {
-    text-align: justify !important;
-    text-justify: inter-word !important;
-    line-height: 1.7 !important; 
-  }
+  /* ==========================================================================
+     AUTHOR SIDEBAR
+     ========================================================================== */
 
-  #main, .page, .page__inner-wrap, .page__content {
-    padding-right: 0 !important;
-    max-width: 100% !important;
-  }
-
-  /* Sidebar Specific Styling */
   .sidebar-wrap {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: var(--global-text-color);
-  }
-  
-  .sidebar-section-title {
-    font-size: 0.90em; 
-    font-weight: 700; 
-    text-transform: uppercase; 
-    letter-spacing: 0.08em;
-    color: var(--global-base-color); 
-    margin-bottom: 15px; 
-    border-bottom: 1px solid var(--global-border-color); 
-    padding-bottom: 4px;
-    text-align: left;
-  }
-
-  /* Smooth Hover Effects */
-  .hover-lift { transition: transform 0.3s ease !important; }
-  .hover-lift:hover { transform: translateY(-4px) !important; cursor: pointer; }
-  
-  /* Grayscale-to-Color for Affiliation Logos */
-  .affil-logo { 
-    display: block; 
-    margin: 0 auto; 
-    filter: grayscale(100%) opacity(70%); 
-    transition: all 0.3s ease; 
-    object-fit: contain; 
-  }
-  .affil-logo:hover { filter: grayscale(0%) opacity(100%); }
-
-  /* FontAwesome Icon Styling */
-  .fa-icon {
-    font-size: 1.3em; 
-    color: var(--global-text-color-light); 
-    transition: all 0.3s ease;
-    display: inline-block;
-  }
-  .fa-icon:hover { transform: translateY(-3px); }
-  .email-icon:hover { color: #d93025; }      
-  .scholar-icon:hover { color: #4285f4; }    
-  .github-icon:hover { color: #333333; }     
-  .linkedin-icon:hover { color: #0077b5; }
-  .orcid-icon:hover { color: #a6ce39; }
-  
-  /* CV Button Styling */
-  .cv-button {
-    display: inline-block; 
-    padding: 8px 20px; 
-    border: 1px solid var(--global-base-color); 
-    border-radius: 4px; 
-    color: var(--global-base-color); 
-    background-color: transparent;
-    font-size: 0.85em; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-    letter-spacing: 0.05em; 
-    text-decoration: none; 
-    transition: all 0.3s ease;
-  }
-  
-  .cv-button:hover {
-    background-color: var(--global-base-color);
-    color: var(--global-white) !important;
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(44, 62, 80, 0.15);
-  }
-
-  /* Mobile Experience */
-  @media (max-width: 1024px) {
-    .sidebar-wrap {
-      padding-bottom: 25px !important;
-      margin-bottom: 25px !important;
-      border-bottom: 1px solid var(--global-border-color); 
-    }
-    .author__avatar img {
-      width: 170px !important;     
-      height: 170px !important;     
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
-      border-radius: 70% !important;
-    }
-    .affil-grid { gap: 15px !important; }
-    .affil-logo { max-width: 100px !important; height: auto !important; }
-  }
-
-  /* Laptop Sidebar Spacing Fix */
-  @media (min-width: 1025px) {
-    .sidebar-wrap {
-      padding-left: 80px !important; 
-      margin-right: -60px !important;
-    }
-  }
-
-  .sidebar-wrap .author__avatar,
-  .sidebar-wrap .author__content {
     width: 100%;
+    box-sizing: border-box;
+    padding: 30px 25px 40px 25px;
+    margin: 0;
+    background-color: #FFFDFB;
+    color: var(--global-text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+
+  /* ==========================================================================
+     PROFILE IMAGE
+     ========================================================================== */
+
+  .sidebar-wrap .author__avatar {
     display: block;
-    text-align: center !important;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   .sidebar-wrap .author__avatar img {
     display: block;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top;
     margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-wrap .author__avatar img:hover {
+    transform: translateY(-4px);
+  }
+
+
+  /* ==========================================================================
+     NAME AND DESCRIPTION
+     ========================================================================== */
+
+  .sidebar-wrap .author__content {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 25px 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .sidebar-wrap .author__content h3 {
+    margin: 0;
+    color: var(--global-base-color);
+    font-size: 1.1em;
+    line-height: 1.15;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .sidebar-wrap .author__content h4 {
+    margin: 6px 0 0 0;
+    color: var(--global-text-color);
+    font-size: 0.7em;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+
+  /* ==========================================================================
+     SOCIAL / CONTACT ICONS
+     ========================================================================== */
+
+  .sidebar-social {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 30px 0;
+    padding: 0;
+  }
+
+  .sidebar-social-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .sidebar-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .fa-icon {
+    display: inline-block;
+    color: var(--global-text-color-light);
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+  }
+
+  .fa-icon:hover {
+    transform: translateY(-3px);
+  }
+
+  .email-icon:hover {
+    color: #d93025;
+  }
+
+  .scholar-icon:hover {
+    color: #4285f4;
+  }
+
+  .github-icon:hover {
+    color: #333333;
+  }
+
+  .linkedin-icon:hover {
+    color: #0077b5;
+  }
+
+  .orcid-icon:hover {
+    color: #a6ce39;
+  }
+
+
+  /* ==========================================================================
+     SIDEBAR SECTION TITLES
+     ========================================================================== */
+
+  .sidebar-section-title {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 15px 0;
+    padding: 0 0 6px 0;
+    border-bottom: 1px solid var(--global-border-color);
+    color: var(--global-base-color);
+    font-size: 0.90em;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.08em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+
+  /* ==========================================================================
+     AFFILIATIONS
+     ========================================================================== */
+
+  .sidebar-affiliations {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .affil-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .affil-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .affil-logo {
+    display: block;
+    width: 80px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(70%);
+    transition: all 0.3s ease;
+  }
+
+  .affil-logo:hover {
+    filter: grayscale(0%) opacity(100%);
+    transform: translateY(-4px);
+  }
+
+
+  /* ==========================================================================
+     CV BUTTON
+     ========================================================================== */
+
+  .sidebar-cv {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--global-border-color);
+    text-align: center;
+  }
+
+  .cv-button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    border: 1px solid var(--global-base-color);
+    border-radius: 4px;
+    color: var(--global-base-color);
+    background-color: transparent;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .cv-button:hover {
+    background-color: var(--global-base-color);
+    color: var(--global-white) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(44, 62, 80, 0.15);
+  }
+
+  .cv-button i {
+    margin-right: 6px;
+  }
+
+
+  /* ==========================================================================
+     MAIN CONTENT
+     ========================================================================== */
+
+  #main p,
+  .page__content p,
+  .archive p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.7;
+  }
+
+
+  /* ==========================================================================
+     MOBILE
+     ========================================================================== */
+
+  @media (max-width: 1024px) {
+
+    .sidebar-wrap {
+      width: 100%;
+      padding: 25px 20px 30px 20px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--global-border-color);
+    }
+
+    .sidebar-wrap .author__avatar img {
+      width: 170px;
+      height: 170px;
+      max-width: 170px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .affil-grid {
+      gap: 15px;
+    }
+
+    .affil-logo {
+      width: 75px;
+      max-width: 100%;
+    }
+  }
+
+
+  /* ==========================================================================
+     LARGE SCREENS
+     ========================================================================== */
+
+  @media (min-width: 1025px) {
+
+    .sidebar-wrap {
+      width: 100%;
+      padding: 30px 25px 40px 25px;
+      margin: 0;
+    }
+
   }
 </style>
 
+
+<!-- ==========================================================================
+     SIDEBAR CONTENT
+     ========================================================================== -->
+
 <div class="sidebar-wrap" itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar" style="text-align: center; margin-bottom: 15px;">
-  <img src="{{ base_path }}/images/{{ author.avatar | default: 'profile.png' }}" class="author__avatar hover-lift" alt="{{ author.name | default: 'John Doe' }}" fetchpriority="high" width="240" height="240" style="border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.06); width: 100%; max-width: 240px; height: auto; aspect-ratio: 1/1; object-fit: cover; object-position: top;">
+
+  <!-- Profile image -->
+  <div class="author__avatar">
+    <img
+      src="{{ base_path }}/images/{{ author.avatar | default: 'profile.png' }}"
+      class="hover-lift"
+      alt="{{ author.name | default: 'John Doe' }}"
+      fetchpriority="high"
+      width="240"
+      height="240">
   </div>
 
-  <div class="author__content" style="text-align: center; margin-bottom: 25px;">
-    <h3 style="margin: 0; color: var(--global-base-color); font-size: 1.1em; font-weight: 700; text-transform: uppercase;">{{ author.name | default: "John Doe" }}</h3>
-    <h4 style="font-size: 0.7em; color: var(--global-text-color); margin-top: 5px; margin-bottom: 0; font-weight: 500;">{{ author.description | default: "PhD Student" }}</h4>
+
+  <!-- Name and description -->
+  <div class="author__content">
+
+    <h3>
+      {{ author.name | default: "John Doe" }}
+    </h3>
+
+    <h4>
+      {{ author.description | default: "PhD Student" }}
+    </h4>
+
   </div>
 
-  <div style="margin-bottom: 30px;">
-    <div style="display: flex; justify-content: center; gap: 20px;">
-      
+
+  <!-- Social links -->
+  <div class="sidebar-social">
+
+    <div class="sidebar-social-inner">
+
       {% if author.email %}
-      <a href="mailto:{{ author.email }}" title="Email">
+      <a
+        href="mailto:{{ author.email }}"
+        title="Email"
+        aria-label="Email">
+
         <i class="fas fa-envelope fa-icon email-icon"></i>
+
       </a>
       {% endif %}
+
 
       {% if author.googlescholar %}
-      <a href="https://scholar.google.com/citations?user={{ author.googlescholar }}" target="_blank" title="Google Scholar">
+      <a
+        href="{{ author.googlescholar }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Google Scholar"
+        aria-label="Google Scholar">
+
         <i class="fas fa-graduation-cap fa-icon scholar-icon"></i>
+
       </a>
       {% endif %}
+
 
       {% if author.github %}
-      <a href="https://github.com/{{ author.github }}" target="_blank" title="GitHub">
+      <a
+        href="https://github.com/{{ author.github }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="GitHub"
+        aria-label="GitHub">
+
         <i class="fab fa-github fa-icon github-icon"></i>
+
       </a>
       {% endif %}
+
 
       {% if author.linkedin %}
-      <a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank" title="LinkedIn">
+      <a
+        href="https://www.linkedin.com/in/{{ author.linkedin }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="LinkedIn"
+        aria-label="LinkedIn">
+
         <i class="fab fa-linkedin fa-icon linkedin-icon"></i>
+
       </a>
       {% endif %}
+
 
       {% if author.orcid %}
-      <a href="https://orcid.org/{{ author.orcid }}" target="_blank" title="ORCID">
+      <a
+        href="https://orcid.org/{{ author.orcid }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="ORCID"
+        aria-label="ORCID">
+
         <i class="fab fa-orcid fa-icon orcid-icon"></i>
+
       </a>
       {% endif %}
 
     </div>
+
   </div>
 
-  <div style="margin-bottom: 35px; padding: 0 5px;">
-    <div class="sidebar-section-title">Affiliations</div>
-    
-    <!-- <div class="affil-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px 15px; align-items: center; justify-items: center;">
-      <img src="{{ base_path }}/images/sfb-icon.png" class="affil-logo hover-lift" alt="SFB 1718 Common Ground" width="80" height="60" style="width: 80px; height: auto;">
-      <img src="{{ base_path }}/images/csp-icon.png" class="affil-logo hover-lift" alt="CogSciPrag Lab" width="80" height="60" style="width: 75px; height: auto;">
+
+  <!-- Affiliations -->
+  <div class="sidebar-affiliations">
+
+    <div class="sidebar-section-title">
+      Affiliations
     </div>
-  </div> -->
 
-    <div class="affil-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px 15px; align-items: center; justify-items: center;">
 
-  <a href="https://uni-tuebingen.de/en/research/core-research/collaborative-research-centers/crc-common-ground/" target="_blank" rel="noopener noreferrer">
-    <img src="{{ base_path }}/images/sfb-icon.png"
-         class="affil-logo hover-lift"
-         alt="SFB 1718 Common Ground"
-         width="80"
-         height="60"
-         style="width: 80px; height: auto;">
-  </a>
+    <div class="affil-grid">
 
-  <a href="https://cogsciprag.github.io/home/" target="_blank" rel="noopener noreferrer">
-    <img src="{{ base_path }}/images/image_2026-09-21_110008215.png"
-         class="affil-logo hover-lift"
-         alt="CogSciPrag Lab"
-         width="80"
-         height="60"
-         style="width: 75px; height: auto;">
-  </a>
+      <!-- SFB 1718 -->
+      <a
+        href="https://uni-tuebingen.de/en/research/core-research/collaborative-research-centers/crc-common-ground/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="SFB 1718 Common Ground">
+
+        <img
+          src="{{ base_path }}/images/sfb-icon.png"
+          class="affil-logo"
+          alt="SFB 1718 Common Ground"
+          width="80"
+          height="60">
+
+      </a>
+
+
+      <!-- CogSciPrag -->
+      <a
+        href="https://cogsciprag.github.io/home/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="CogSciPrag Lab">
+
+        <img
+          src="{{ base_path }}/images/image_2026-09-21_110008215.png"
+          class="affil-logo"
+          alt="CogSciPrag Lab"
+          width="80"
+          height="60">
+
+      </a>
+
+    </div>
+
+
+    <!-- CV -->
+    <div class="sidebar-cv">
+
+      <a
+        href="{{ base_path }}/files/John_Doe_CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cv-button">
+
+        <i class="fas fa-file-pdf"></i>
+        Download CV
+
+      </a>
+
+    </div>
+
+  </div>
 
 </div>
-
-  <div style="margin-top: 30px; text-align: center; border-top: 1px solid var(--global-border-color); padding-top: 20px;">
-    <a href="{{ base_path }}/files/John_Doe_CV.pdf" target="_blank" class="cv-button">
-      <i class="fas fa-file-pdf" style="margin-right: 6px;"></i> Download CV
-    </a>
-  </div>
-
-
-{% comment %}
-
-  <div style="margin-top: 30px; border-top: 1px solid var(--global-border-color); padding-top: 20px; text-align: center;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: var(--global-card-bg-color); padding: 6px 12px; border-radius: 4px; border: 1px solid var(--global-border-color); font-size: 0.8em; color: var(--global-text-color);">
-      <span style="height: 8px; width: 8px; background-color: #10b981; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);"></span>
-      Open to Collaborations
-    </div>
-  </div>
-  
-
-  <div style="margin-top: 20px; text-align: center;">
-    <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.05em; color: var(--global-text-color-light); margin-bottom: 3px; font-weight: 700;">Academic Impact</p>
-    <p style="font-size: 0.85em; color: var(--global-text-color); margin: 0;">
-      Citations: <strong>120+</strong> &nbsp;&bull;&nbsp; h-index: <strong>5</strong>
-    </p>
-  </div>
-
-{% endcomment %}
