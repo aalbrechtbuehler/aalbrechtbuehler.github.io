@@ -85,5 +85,17 @@ $sidebar-screen-min-width   : 1024px;
 
     --global-scrollbar-color            : #CFC3C7;
     --global-scrollbar-hover-color      : #A99AA0;
+
+   
 }
+
+/* ==========================================================================
+   CUSTOM BACKGROUND
+   ========================================================================== */
+
+html,
+body {
+    background-color: #F3E8EC !important;
+}
+
 
