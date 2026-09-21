@@ -7,485 +7,498 @@
 {% endif %}
 
 <style>
-  /* ==========================================================================
-     AUTHOR SIDEBAR
-     ========================================================================== */
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+.sidebar-wrap {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 30px 25px 40px 25px;
+  margin: 0;
+
+  background-color: #9A7E98;
+  color: #FFFFFF;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  border-radius: 0;
+}
+
+
+/* ==========================================================================
+   AVATAR
+   ========================================================================== */
+
+.sidebar-wrap .author__avatar {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 0 18px 0;
+}
+
+.sidebar-wrap .author__avatar img {
+  display: block;
+
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+
+  margin: 0 auto;
+
+  object-fit: cover;
+  object-position: top;
+
+  border-radius: 50%;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.sidebar-wrap .author__avatar img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+
+/* ==========================================================================
+   NAME
+   ========================================================================== */
+
+.sidebar-wrap .author__name {
+  display: block;
+
+  margin: 0 0 6px 0;
+
+  color: #FFFFFF;
+
+  font-size: 1.35em;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   BIO
+   ========================================================================== */
+
+.sidebar-wrap .author__bio {
+  margin: 0 0 18px 0;
+
+  color: #F7F4F7;
+
+  font-size: 0.92em;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   SOCIAL LINKS
+   ========================================================================== */
+
+.sidebar-social {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 20px 0 28px 0;
+}
+
+.sidebar-social a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  color: #FFFFFF;
+
+  font-size: 1.05em;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-social a:hover {
+  color: #E0E8E2;
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================================================
+   AFFILIATIONS
+   ========================================================================== */
+
+.sidebar-affiliations {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.sidebar-section-title {
+  margin-bottom: 15px;
+
+  color: #FFFFFF;
+
+  font-size: 0.78em;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.affil-grid {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.affil-grid a {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  padding: 7px;
+
+  background-color: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.affil-grid a:hover {
+  background-color: rgba(224, 232, 226, 0.30);
+  transform: translateY(-2px);
+}
+
+.affil-grid img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* ==========================================================================
+   CV BUTTON
+   ========================================================================== */
+
+.sidebar-cv {
+  margin-top: 25px;
+
+  text-align: center;
+}
+
+.sidebar-cv a {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  background-color: #562154;
+  color: #FFFFFF;
+
+  border: 1px solid #562154;
+  border-radius: 4px;
+
+  font-size: 0.82em;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-cv a:hover {
+  background-color: #29524A;
+  border-color: #29524A;
+  color: #FFFFFF;
+
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================================================
+   AUTHOR URLS / ADDITIONAL LINKS
+   ========================================================================== */
+
+.sidebar-wrap .author__urls {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  text-align: center;
+}
+
+.sidebar-wrap .author__urls li {
+  margin-bottom: 7px;
+}
+
+.sidebar-wrap .author__urls a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.sidebar-wrap .author__urls a:hover {
+  color: #E0E8E2;
+}
+
+
+/* ==========================================================================
+   GENERAL SIDEBAR LINKS
+   ========================================================================== */
+
+.sidebar-wrap a {
+  color: #FFFFFF;
+}
+
+.sidebar-wrap a:hover {
+  color: #E0E8E2;
+}
+
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 768px) {
 
   .sidebar-wrap {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 30px 25px 40px 25px;
-    margin: 0;
-    background-color: #FFFDFB;
-    color: var(--global-text-color);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
-
-
-  /* ==========================================================================
-     PROFILE IMAGE
-     ========================================================================== */
-
-  .sidebar-wrap .author__avatar {
-    display: block;
-    width: 100%;
-    margin: 0 0 15px 0;
-    padding: 0;
-    text-align: center;
-    box-sizing: border-box;
+    padding: 25px 20px 30px 20px;
   }
 
   .sidebar-wrap .author__avatar img {
-    display: block;
-    width: 100%;
-    max-width: 240px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: top;
-    margin: 0 auto;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease;
+    max-width: 200px;
   }
-
-  .sidebar-wrap .author__avatar img:hover {
-    transform: translateY(-4px);
-  }
-
-
-  /* ==========================================================================
-     NAME AND DESCRIPTION
-     ========================================================================== */
-
-  .sidebar-wrap .author__content {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 0 25px 0;
-    padding: 0;
-    text-align: center;
-  }
-
-  .sidebar-wrap .author__content h3 {
-    margin: 0;
-    color: var(--global-base-color);
-    font-size: 1.1em;
-    line-height: 1.15;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  .sidebar-wrap .author__content h4 {
-    margin: 6px 0 0 0;
-    color: var(--global-text-color);
-    font-size: 0.7em;
-    line-height: 1.4;
-    font-weight: 500;
-  }
-
-
-  /* ==========================================================================
-     SOCIAL / CONTACT ICONS
-     ========================================================================== */
 
   .sidebar-social {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 0 30px 0;
-    padding: 0;
-  }
-
-  .sidebar-social-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .sidebar-social a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-  }
-
-  .fa-icon {
-    display: inline-block;
-    color: var(--global-text-color-light);
-    font-size: 1.3em;
-    transition: all 0.3s ease;
-  }
-
-  .fa-icon:hover {
-    transform: translateY(-3px);
-  }
-
-  .email-icon:hover {
-    color: #d93025;
-  }
-
-  .scholar-icon:hover {
-    color: #4285f4;
-  }
-
-  .github-icon:hover {
-    color: #333333;
-  }
-
-  .linkedin-icon:hover {
-    color: #0077b5;
-  }
-
-  .orcid-icon:hover {
-    color: #a6ce39;
-  }
-
-
-  /* ==========================================================================
-     SIDEBAR SECTION TITLES
-     ========================================================================== */
-
-  .sidebar-section-title {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 0 15px 0;
-    padding: 0 0 6px 0;
-    border-bottom: 1px solid var(--global-border-color);
-    color: var(--global-base-color);
-    font-size: 0.90em;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0.08em;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-
-  /* ==========================================================================
-     AFFILIATIONS
-     ========================================================================== */
-
-  .sidebar-affiliations {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  .affil-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    align-items: center;
-    justify-items: center;
-    width: 100%;
-    box-sizing: border-box;
+    gap: 12px;
   }
 
   .affil-grid a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    text-decoration: none;
+    width: 54px;
+    height: 54px;
   }
 
-  .affil-logo {
-    display: block;
-    width: 80px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    filter: grayscale(100%) opacity(70%);
-    transition: all 0.3s ease;
-  }
+}
 
-  .affil-logo:hover {
-    filter: grayscale(0%) opacity(100%);
-    transform: translateY(-4px);
-  }
-
-
-  /* ==========================================================================
-     CV BUTTON
-     ========================================================================== */
-
-  .sidebar-cv {
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid var(--global-border-color);
-    text-align: center;
-  }
-
-  .cv-button {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 8px 20px;
-    border: 1px solid var(--global-base-color);
-    border-radius: 4px;
-    color: var(--global-base-color);
-    background-color: transparent;
-    font-size: 0.85em;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-  }
-
-  .cv-button:hover {
-    background-color: var(--global-base-color);
-    color: var(--global-white) !important;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(44, 62, 80, 0.15);
-  }
-
-  .cv-button i {
-    margin-right: 6px;
-  }
-
-
-  /* ==========================================================================
-     MAIN CONTENT
-     ========================================================================== */
-
-  #main p,
-  .page__content p,
-  .archive p {
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.7;
-  }
-
-
-  /* ==========================================================================
-     MOBILE
-     ========================================================================== */
-
-  @media (max-width: 1024px) {
-
-    .sidebar-wrap {
-      width: 100%;
-      padding: 25px 20px 30px 20px;
-      margin-bottom: 25px;
-      border-bottom: 1px solid var(--global-border-color);
-    }
-
-    .sidebar-wrap .author__avatar img {
-      width: 170px;
-      height: 170px;
-      max-width: 170px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .affil-grid {
-      gap: 15px;
-    }
-
-    .affil-logo {
-      width: 75px;
-      max-width: 100%;
-    }
-  }
-
-
-  /* ==========================================================================
-     LARGE SCREENS
-     ========================================================================== */
-
-  @media (min-width: 1025px) {
-
-    .sidebar-wrap {
-      width: 100%;
-      padding: 30px 25px 40px 25px;
-      margin: 0;
-    }
-
-  }
 </style>
 
-
-<!-- ==========================================================================
-     SIDEBAR CONTENT
-     ========================================================================== -->
 
 <div class="sidebar-wrap" itemscope itemtype="http://schema.org/Person">
 
 
-  <!-- Profile image -->
+  <!-- ================================================================
+       AVATAR
+       ================================================================ -->
+
   <div class="author__avatar">
     <img
       src="{{ base_path }}/images/{{ author.avatar | default: 'profile.png' }}"
-      class="hover-lift"
+      class="author__avatar hover-lift"
       alt="{{ author.name | default: 'John Doe' }}"
       fetchpriority="high"
       width="240"
-      height="240">
+      height="240"
+    >
   </div>
 
 
-  <!-- Name and description -->
-  <div class="author__content">
+  <!-- ================================================================
+       NAME
+       ================================================================ -->
 
-    <h3>
-      {{ author.name | default: "John Doe" }}
-    </h3>
-
-    <h4>
-      {{ author.description | default: "PhD Student" }}
-    </h4>
-
-  </div>
+  {% if author.name %}
+    <div class="author__name" itemprop="name">
+      {{ author.name }}
+    </div>
+  {% endif %}
 
 
-  <!-- Social links -->
+  <!-- ================================================================
+       BIO
+       ================================================================ -->
+
+  {% if author.bio %}
+    <div class="author__bio" itemprop="description">
+      {{ author.bio }}
+    </div>
+  {% endif %}
+
+
+  <!-- ================================================================
+       SOCIAL LINKS
+       ================================================================ -->
+
   <div class="sidebar-social">
 
-    <div class="sidebar-social-inner">
-
-      {% if author.email %}
-      <a
-        href="mailto:{{ author.email }}"
-        title="Email"
-        aria-label="Email">
-
-        <i class="fas fa-envelope fa-icon email-icon"></i>
-
-      </a>
-      {% endif %}
-
-
-      {% if author.googlescholar %}
+    {% if author.googlescholar %}
       <a
         href="{{ author.googlescholar }}"
-        target="_blank"
-        rel="noopener noreferrer"
+        aria-label="Google Scholar"
         title="Google Scholar"
-        aria-label="Google Scholar">
-
-        <i class="fas fa-graduation-cap fa-icon scholar-icon"></i>
-
-      </a>
-      {% endif %}
-
-
-      {% if author.github %}
-      <a
-        href="https://github.com/{{ author.github }}"
         target="_blank"
         rel="noopener noreferrer"
-        title="GitHub"
-        aria-label="GitHub">
-
-        <i class="fab fa-github fa-icon github-icon"></i>
-
+      >
+        <i class="ai ai-google-scholar" aria-hidden="true"></i>
       </a>
-      {% endif %}
+    {% endif %}
 
-
-      {% if author.linkedin %}
-      <a
-        href="https://www.linkedin.com/in/{{ author.linkedin }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="LinkedIn"
-        aria-label="LinkedIn">
-
-        <i class="fab fa-linkedin fa-icon linkedin-icon"></i>
-
-      </a>
-      {% endif %}
-
-
-      {% if author.orcid %}
+    {% if author.orcid %}
       <a
         href="https://orcid.org/{{ author.orcid }}"
+        aria-label="ORCID"
+        title="ORCID"
         target="_blank"
         rel="noopener noreferrer"
-        title="ORCID"
-        aria-label="ORCID">
-
-        <i class="fab fa-orcid fa-icon orcid-icon"></i>
-
+      >
+        <i class="ai ai-orcid" aria-hidden="true"></i>
       </a>
-      {% endif %}
+    {% endif %}
 
-    </div>
+    {% if author.github %}
+      <a
+        href="https://github.com/{{ author.github }}"
+        aria-label="GitHub"
+        title="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+
+    {% if author.email %}
+      <a
+        href="mailto:{{ author.email }}"
+        aria-label="Email"
+        title="Email"
+      >
+        <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+
+    {% if author.instagram %}
+      <a
+        href="https://instagram.com/{{ author.instagram | remove: '@' }}"
+        aria-label="Instagram"
+        title="Instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-fw fa-instagram" aria-hidden="true"></i>
+      </a>
+    {% endif %}
 
   </div>
 
 
-  <!-- Affiliations -->
+  <!-- ================================================================
+       AFFILIATIONS
+       ================================================================ -->
+
   <div class="sidebar-affiliations">
 
     <div class="sidebar-section-title">
       Affiliations
     </div>
 
-
     <div class="affil-grid">
 
-      <!-- SFB 1718 -->
       <a
         href="https://uni-tuebingen.de/en/research/core-research/collaborative-research-centers/crc-common-ground/"
         target="_blank"
         rel="noopener noreferrer"
-        title="SFB 1718 Common Ground">
-
+        aria-label="SFB 1718 Common Ground"
+        title="SFB 1718 Common Ground"
+      >
         <img
           src="{{ base_path }}/images/sfb-icon.png"
-          class="affil-logo"
           alt="SFB 1718 Common Ground"
-          width="80"
-          height="60">
-
+        >
       </a>
 
-
-      <!-- CogSciPrag -->
       <a
         href="https://cogsciprag.github.io/home/"
         target="_blank"
         rel="noopener noreferrer"
-        title="CogSciPrag Lab">
-
+        aria-label="Cognitive Science and Pragmatics Group"
+        title="Cognitive Science and Pragmatics Group"
+      >
         <img
           src="{{ base_path }}/images/image_2026-09-21_110008215.png"
-          class="affil-logo"
-          alt="CogSciPrag Lab"
-          width="80"
-          height="60">
-
-      </a>
-
-    </div>
-
-
-    <!-- CV -->
-    <div class="sidebar-cv">
-
-      <a
-        href="{{ base_path }}/files/John_Doe_CV.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="cv-button">
-
-        <i class="fas fa-file-pdf"></i>
-        Download CV
-
+          alt="Cognitive Science and Pragmatics Group"
+        >
       </a>
 
     </div>
 
   </div>
+
+
+  <!-- ================================================================
+       CV
+       ================================================================ -->
+
+  <div class="sidebar-cv">
+
+    <a
+      href="{{ base_path }}/files/John_Doe_CV.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fas fa-file-pdf" aria-hidden="true"></i>
+      &nbsp; CV
+    </a>
+
+  </div>
+
 
 </div>
