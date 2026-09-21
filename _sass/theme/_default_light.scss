@@ -143,20 +143,3 @@ input[type="button"] {
     background-color: var(--global-footer-bg-color);
     color: var(--global-stone-color);
 }
-
-/* --------------------------------------------------------------------------
-   header
-   -------------------------------------------------------------------------- */
-
-.masthead,
-.greedy-nav {
-    background-color: var(--global-sage-color) !important;
-}
-
-.greedy-nav a {
-    color: var(--global-stone-color) !important;
-}
-
-.greedy-nav a:hover {
-    color: var(--global-stone-color) !important;
-}
