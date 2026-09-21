@@ -342,18 +342,70 @@
   padding-right: 20px !important;
 }
 
+/* ==========================================================================
+   CUSTOM SIDEBAR LAYOUT
+   ========================================================================== */
+
+.initial-content,
+.page__inner-wrap {
+  max-width: 100% !important;
+}
+
+.page {
+  width: auto !important;
+  padding-right: 20px !important;
+}
+
+/* White sidebar panel */
 .sidebar {
-  width: 400px !important;
-  max-width: 400px !important;
-  min-width: 400px !important;
+  width: 330px !important;
+  max-width: 330px !important;
+  min-width: 330px !important;
 
   float: none !important;
   position: static !important;
 
-  background-color: #FFFDFB;
   box-sizing: border-box;
 
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: #FFFDFB;
+
+  /* Space between the edge of the rectangle and its contents */
+  padding: 30px 25px 40px 25px;
+
+  /* Remove inherited spacing that can shift the panel */
+  margin-left: 0;
+  margin-right: 0;
 }
 
+/* Keep the author content aligned with the panel */
+.sidebar .author__content {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+/* Profile image */
+.sidebar .author__avatar {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar .author__avatar img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Name and text */
+.sidebar .author__name,
+.sidebar .author__bio {
+  text-align: center;
+}
+
+/* Social links */
+.sidebar .author__urls {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
