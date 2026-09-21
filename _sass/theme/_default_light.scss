@@ -33,7 +33,7 @@ $sidebar-screen-min-width   : 1024px;
 :root {
     /* -- Standard minimal-mistakes theme variables -- */
     --global-base-color                 : #781364; /* primary plum: headings, borders, icons, active states */
-    --global-bg-color                   : #ffffff; /* page / masthead background */
+    --global-bg-color                   : #E8D4E1; /* page / masthead background */
     --global-footer-bg-color            : #fcfafc;
     --global-border-color               : #eaeaea;
     --global-dark-border-color          : #bdc1c4;
@@ -50,7 +50,7 @@ $sidebar-screen-min-width   : 1024px;
     --global-thead-color                : #{$lighter-gray};
 
     /* -- Site-specific variables (added so pages never need literal hex) -- */
-    --global-white                      : #ffffff;
+    --global-white                      : #E8D4E1;
     --global-hover-color                : #540d46; /* darker plum for hover/active states */
     --global-card-bg-color              : #fbf8fa; /* cards, badges, info boxes */
     --global-surface-color              : #f8f3f7; /* pill/tab track backgrounds */
