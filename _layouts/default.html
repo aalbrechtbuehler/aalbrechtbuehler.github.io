@@ -28,9 +28,9 @@ layout: compress
       width: 380px; /* ডেস্কটপে ফিক্সড প্রস্থ */
       flex-shrink: 0;
       padding: 0px 10px;
-      /*border-right: 1px solid #eeeeee; /* ডান দিকের ভার্টিক্যাল লাইন */
+      /*border-right: 1px solid var(--global-border-color); /* ডান দিকের ভার্টিক্যাল লাইন */
       box-sizing: border-box;
-      background-color: #ffffff;
+      background-color: var(--global-bg-color);
     }
 
     .right-content {
@@ -49,7 +49,7 @@ layout: compress
       .left-sidebar {
         width: 100%; /* মোবাইলে সাইডবার পুরো স্ক্রিন জুড়ে থাকবে */
         border-right: none; /* ভার্টিক্যাল লাইনটি মুছে যাবে */
-        border-bottom: 2px solid #eeeeee; /* সাইডবারের নিচে একটি লাইন আসবে */
+        border-bottom: 2px solid var(--global-border-color); /* সাইডবারের নিচে একটি লাইন আসবে */
         padding: 20px 15px; /* মোবাইলের জন্য প্যাডিং কমানো হয়েছে */
         text-align: center; /* মোবাইলে সব আইকন ও ছবি মাঝখানে সুন্দর দেখাবে */
       }
@@ -61,7 +61,7 @@ layout: compress
   </style>
 </head>
 
-<body style="margin:0; display:flex; flex-direction:column; min-height:100vh; background-color:#ffffff;">
+<body style="margin:0; display:flex; flex-direction:column; min-height:100vh; background-color:var(--global-bg-color);">
 
   {% include masthead.html %}
 
